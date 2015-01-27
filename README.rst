@@ -29,34 +29,30 @@ Add ``db-obfuscate`` to your ``INSTALLED_APPS``
         'db-obfuscate',
     )
 
-Add the ``db-obfuscate`` URLs to your ``urls.py``
+Add full paths to your models to your ``settings.py``
 
 .. code-block:: python
 
-    urlpatterns = patterns('',
+    ENCRYPT_ID_FOR_MODELS = patterns('',
+        'django.contrib.auth.models.User',
         ...
-        url(r'^/', include('db-obfuscate.urls')),
     )
 
-Before your tags/filters are available in your templates, load them by using
+Alternatively, you can set a class attribute flag as follow:
+.. code-block:: python
 
-.. code-block:: html
-
-	{% load db-obfuscate_tags %}
-
-
-Don't forget to migrate your database
-
-.. code-block:: bash
-
-    ./manage.py migrate db-obfuscate
-
+    class MyEncrypedIdModel(models.Model):
+        pseudo_encrypt_id = True
 
 Usage
 -----
 
-TODO: Describe usage or point to docs. Also describe available settings and
-templatetags.
+After setting up, you can conveniently call the management command
+
+.. code-block:: bash
+    python manage.py db --encrypt-all #this will encrypt all your models specified in settings.py and flagged true for pseudo_encrypt_id
+
+    python manage.py db --encrypt-model myapp.models.SomeModelA myapp.models.SomeModelB #this will encrypt all the models specified in this command, use this if you want a one time setting
 
 
 Contribute
