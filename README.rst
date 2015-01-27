@@ -1,7 +1,13 @@
-django-db_obfuscate-id
+django-db-obfuscate-id
 ============
 
 A reusable Django app that psuedo encrypts your id from a database level.
+
+What is this
+------------
+
+This is a small app that helps help you change your Autofield ids of your models into a "psuedo-encrypted" id sequence
+The encryption is done on database layer so you won't have to worry about complicating your queries or sketching your model managers
 
 Installation
 ------------
@@ -17,8 +23,6 @@ To get the latest commit from GitHub
 .. code-block:: bash
 
     pip install -e git+git://github.com/thisiscam/django-db_obfuscate-id.git#egg=db_obfuscate
-
-TODO: Describe further installation steps (edit / remove the examples below):
 
 Add ``db_obfuscate`` to your ``INSTALLED_APPS``
 
@@ -45,13 +49,19 @@ Alternatively, you can set a class attribute flag as follow
     class MyEncrypedIdModel(models.Model):
         pseudo_encrypt_id = True
 
+
+Note: Currently, the app only supports postgres, and takes advantage of psuedo-encrypt scripts given here https://wiki.postgresql.org/wiki/Pseudo_encrypt
+
+More support to be added in the future, and feel free to PR since I'm not using other databases other than postgres now, and will only be updating this repo on a per-use basis
+
 Usage
 -----
 
 After setting up, you can conveniently call the management command
 
 .. code-block:: bash
-    python manage.py db --encrypt-all #this will encrypt all your models specified in settings.py and flagged true for pseudo_encrypt_id
+
+    python manage.py db --encrypt-all #this will encrypt all your models specified in settings.py and those flagged true for pseudo_encrypt_id
 
     python manage.py db --encrypt-model myapp.models.SomeModelA myapp.models.SomeModelB #this will encrypt all the models specified in this command, use this if you want a one time setting
 
