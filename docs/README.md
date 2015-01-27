@@ -18,7 +18,7 @@ Answer the questions:
     > Root path for the documentation [.]:
     > Separate source and build directories (y/N) [n]: y
     > Name prefix for templates and static dir [_]:
-    > Project name: django-db-obfuscate-id
+    > Project name: django-db_obfuscate-id
     > Author name(s): Cambridge Yang
     > Project version: 0.1
     > Project release [0.1]:

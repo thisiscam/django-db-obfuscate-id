@@ -4,7 +4,7 @@ include DESCRIPTION
 include CHANGELOG.txt
 include README.md
 include tox.ini
-graft db-obfuscate
+graft db_obfuscate
 global-exclude *.orig *.pyc *.log *.swp local_settings.py
-prune db-obfuscate/tests/coverage
-prune db-obfuscate/.ropeproject
+prune db_obfuscate/tests/coverage
+prune db_obfuscate/.ropeproject

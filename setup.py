@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 """
-Python setup file for the db-obfuscate app.
+Python setup file for the db_obfuscate app.
 
 In order to register your app at pypi.python.org, create an account at
 pypi.python.org and login, then register your new app like so:
@@ -21,7 +21,7 @@ If all looks good, you can make your first release:
     python setup.py sdist upload
 
 For new releases, you need to bump the version number in
-db-obfuscate/__init__.py and re-run the above command.
+db_obfuscate/__init__.py and re-run the above command.
 
 For more information on creating source distributions, see
 http://docs.python.org/2/distutils/sourcedist.html
@@ -29,7 +29,7 @@ http://docs.python.org/2/distutils/sourcedist.html
 """
 import os
 from setuptools import setup, find_packages
-import db-obfuscate as app
+import db_obfuscate as app
 
 
 dev_requires = [
@@ -57,7 +57,7 @@ setup(
     keywords='django, app, db, encryped_id',
     author='Cambridge Yang',
     author_email='thisiscam95@gmail.com',
-    url="https://github.com/thisiscam/django-db-obfuscate-id",
+    url="https://github.com/thisiscam/django-db_obfuscate-id",
     packages=find_packages(),
     include_package_data=True,
     install_requires=install_requires,

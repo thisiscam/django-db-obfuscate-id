@@ -1,4 +1,4 @@
-"""Tests for the models of the db-obfuscate app."""
+"""Tests for the models of the db_obfuscate app."""
 from django.test import TestCase
 
 # from . import factories

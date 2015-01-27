@@ -1,6 +1,6 @@
 [run]
 source =
-    db-obfuscate
+    db_obfuscate
 branch = True
 omit =
     ./*

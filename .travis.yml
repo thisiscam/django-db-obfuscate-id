@@ -5,7 +5,7 @@ install:
   - pip install -r test_requirements.txt --use-mirrors
   - pip install coveralls
 script:
-  - cd db-obfuscate/tests
+  - cd db_obfuscate/tests
   - ./runtests.py
   - mv .coverage ../../
   - cd ../../

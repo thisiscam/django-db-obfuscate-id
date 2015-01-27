@@ -19,7 +19,7 @@ DATABASES = {
     }
 }
 
-ROOT_URLCONF = 'db-obfuscate.tests.urls'
+ROOT_URLCONF = 'db_obfuscate.tests.urls'
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(APP_ROOT, '../app_static')
@@ -46,8 +46,8 @@ EXTERNAL_APPS = [
 ]
 
 INTERNAL_APPS = [
-    'db-obfuscate',
-    'db-obfuscate.tests.test_app',
+    'db_obfuscate',
+    'db_obfuscate.tests.test_app',
 ]
 
 INSTALLED_APPS = EXTERNAL_APPS + INTERNAL_APPS

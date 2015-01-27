@@ -1,4 +1,4 @@
-"""Admin classes for the db-obfuscate app."""
+"""Admin classes for the db_obfuscate app."""
 # from django.contrib import admin
 
 # from . import models

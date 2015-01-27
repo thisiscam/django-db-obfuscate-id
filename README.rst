@@ -1,4 +1,4 @@
-django-db-obfuscate-id
+django-db_obfuscate-id
 ============
 
 A reusable Django app that psuedo encrypts your id from a database level.
@@ -16,17 +16,17 @@ To get the latest commit from GitHub
 
 .. code-block:: bash
 
-    pip install -e git+git://github.com/thisiscam/django-db-obfuscate-id.git#egg=db-obfuscate
+    pip install -e git+git://github.com/thisiscam/django-db_obfuscate-id.git#egg=db_obfuscate
 
 TODO: Describe further installation steps (edit / remove the examples below):
 
-Add ``db-obfuscate`` to your ``INSTALLED_APPS``
+Add ``db_obfuscate`` to your ``INSTALLED_APPS``
 
 .. code-block:: python
 
     INSTALLED_APPS = (
         ...,
-        'db-obfuscate',
+        'db_obfuscate',
     )
 
 Add full paths to your models to your ``settings.py``
