@@ -33,12 +33,13 @@ Add full paths to your models to your ``settings.py``
 
 .. code-block:: python
 
-    ENCRYPT_ID_FOR_MODELS = patterns('',
+    ENCRYPT_ID_FOR_MODELS = (
         'django.contrib.auth.models.User',
         ...
     )
 
-Alternatively, you can set a class attribute flag as follow:
+Alternatively, you can set a class attribute flag as follow
+
 .. code-block:: python
 
     class MyEncrypedIdModel(models.Model):
