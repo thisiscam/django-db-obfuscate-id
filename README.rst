@@ -22,7 +22,7 @@ To get the latest commit from GitHub
 
 .. code-block:: bash
 
-    pip install -e git+git://github.com/thisiscam/django-db_obfuscate-id.git#egg=db_obfuscate
+    pip install -e git+git://github.com/thisiscam/django-db-obfuscate-id.git#egg=db_obfuscate
 
 Add ``db_obfuscate`` to your ``INSTALLED_APPS``
 
