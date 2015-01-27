@@ -1,7 +1,7 @@
 django-db-obfuscate-id
 ============
 
-A reusable Django app that psuedo encrypts your id from a database level.
+A reusable Django app that psuedo encrypts your id at database level.
 
 What is this
 ------------
@@ -65,6 +65,8 @@ After setting up, you can conveniently call the management command
 
     python manage.py db --encrypt-model myapp.models.SomeModelA myapp.models.SomeModelB #this will encrypt all the models specified in this command, use this if you want a one time setting
 
+
+After one of the two commands, your according models will be using a encryped sequence instead of the normal increasing sequence, note that items in the database won't be migrated to the new sequence, so you do have risk that the newly generated ids will collide onto the old existing ids! I'm still thinking of a good solution to this but feel free to PR if you have one. For now, the seemingly safest way is to use an entirely new database with this app and maybe migrate your data to the new database
 
 Contribute
 ----------
