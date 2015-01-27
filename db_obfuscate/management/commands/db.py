@@ -27,7 +27,6 @@ def add_psuedo_encrypt(model_class_names):
             cursor.execute(set_function)
             print "encrypted " + str(model_class) + "'s id"
         else:
-            import pdb; pdb.set_trace()
             import warnings
             warnings.warn("Model {0} does not have id as Autofield, can't encrypt, skip.".format(model_class))
     
